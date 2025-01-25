@@ -1,6 +1,9 @@
 # BugHuntFest - Playwright Patterns by jaktestowac.pl
 
-This repository contains code examples used during BugHuntFest - Playwright Patterns by [jaktestowac.pl](jaktestowac.pl) team.
+This repository contains code examples used during BugHuntFest conference:
+
+_"Nowe paradygmaty automatyzacji - jak Playwright zmienił krajobraz testów?"_
+by [jaktestowac.pl](jaktestowac.pl) team.
 
 ## Overview
 
