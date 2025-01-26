@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:3000/"
+  phases:
+    - arrivalRate: 2
+      duration: 3
+  payload:
+    - path: ./test-data/pages.csv
+      fields:
+        - "url"
+        - "title"
+      loadAll: true
+      name: pageChecks
+  engines:
+    playwright: {}
+  processor: ./navigation.flows.js
+scenarios:
+  - name: smoke_test_page
+    engine: playwright
+    flowFunction: checkPage

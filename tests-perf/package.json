@@ -1,0 +1,19 @@
+{
+  "name": "tests-perf",
+  "version": "1.0.0",
+  "description": "Playwright Patterns for Test Automation",
+  "scripts": {
+    "test": "npx artillery run browser-smoke-test.ts"
+  },
+  "keywords": [
+    "playwright",
+    "patterns",
+    "testing",
+    "automation",
+    "artillery.io"
+  ],
+  "author": "jaktestowac.pl",
+  "dependencies": {
+    "artillery": "^2.0.22"
+  }
+}
