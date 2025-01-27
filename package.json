@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Playwright Patterns for Test Automation",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "codegen": "npx playwright codegen http://localhost:3000/"
   },
   "keywords": [
     "playwright",
@@ -14,8 +15,9 @@
   "author": "jaktestowac.pl",
   "license": "ISC",
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
     "@eslint/js": "^9.12.0",
-    "@faker-js/faker": "^9.0.3",
+    "@faker-js/faker": "^9.4.0",
     "@playwright/test": "^1.50.0",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
     "@types/node": "^22.7.8",
@@ -25,7 +27,6 @@
     "eslint-plugin-prettier": "^5.2.1",
     "globals": "^15.11.0",
     "prettier": "^3.3.3",
-    "typescript-eslint": "^8.10.0",
-    "@axe-core/playwright": "^4.10.1"
+    "typescript-eslint": "^8.10.0"
   }
 }

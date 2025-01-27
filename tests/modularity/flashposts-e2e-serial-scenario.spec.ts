@@ -1,6 +1,6 @@
+import { generateFlashPost } from '@_src/helpers/helpers';
 import { createFlashPost, login } from '@_src/helpers/ui-actions.helper';
 import { expect, test } from '@playwright/test';
-import { sampleFlashpost } from 'test-data/flashpost.data';
 import { userData } from 'test-data/user.data';
 
 /* 
@@ -11,7 +11,11 @@ Each test is a step in the scenario.
 test.describe.configure({ mode: 'serial' });
 
 test.describe('Flashpost e2e scenario (serial)', () => {
-  const testFlashpost = sampleFlashpost;
+  let testFlashpost: FlashPost;
+
+  test.beforeAll(async ({}) => {
+    testFlashpost = generateFlashPost();
+  });
 
   test('should successfully create a new flashpost', async ({ page }) => {
     // Arrange:

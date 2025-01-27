@@ -19,4 +19,23 @@ test.describe('GAD homepage', () => {
 
     expect(accessibilityScanResults.violations).toEqual([]);
   });
+
+  test('accessibility issues (with some disabled rules)', async ({ page }) => {
+    const accessibilityScanResults = await new AxeBuilder({ page })
+      .disableRules([
+        'color-contrast',
+        'button-name',
+        'image-alt',
+        'label',
+        'link-name',
+        'region',
+        'html-has-lang',
+        'landmark-one-main',
+        'link-in-text-block',
+        'presentation-role-conflict',
+      ])
+      .analyze();
+
+    expect(accessibilityScanResults.violations).toEqual([]);
+  });
 });
