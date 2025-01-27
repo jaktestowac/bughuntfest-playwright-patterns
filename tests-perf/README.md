@@ -1,6 +1,6 @@
 # BugHuntFest - New Automation Paradigms - How Has Playwright Changed the Testing Landscape? by jaktestowac.pl
 
-This repository contains code examples used during BugHuntFest conference:
+This sub project contains code examples used during BugHuntFest conference:
 
 _"New Automation Paradigms - How Has Playwright Changed the Testing Landscape?"_
 
@@ -16,12 +16,7 @@ More:
 
 Test framework used to demonstrate concepts of Playwright:
 
-- Modularity
-- Auto-waiting mechanism
-- Test Data Management
-- Non Functional Testing (Performance, Accessibility, Visual Testing)
-- Test generation
-- Reporting and tracking
+- Non Functional Testing (Performance using artillery.io)
 
 ## Who we are?
 
@@ -40,25 +35,13 @@ Before you start, make sure you have the following installed:
 - [npm](https://www.npmjs.com/)
 - our free application to practice automation - [🦎 GAD](https://github.com/jaktestowac/gad-gui-api-demo)
 
-## Project Structure
-
-```
-├── tests/                    # Test files
-│   ├── modularity/          # Examples of test
-│   └── ...
-├── test-data/               # Test data files
-├── src/                     # Source files
-│   └── helpers/             # Helper functions
-└── playwright.config.ts     # Playwright configuration
-```
-
 ## Setup
 
 1. Clone the repository:
 
    ```bash
    git clone https://github.com/jaktestowac/bughuntfest-playwright-patterns.git
-   cd bughuntfest-playwright-patterns
+   cd bughuntfest-playwright-patterns/tests-perf
    ```
 
 2. Install dependencies:
@@ -75,42 +58,11 @@ Run all tests:
 npm run test
 ```
 
-Run specific test file:
-
-```bash
-npx playwright test tests/modularity/flashposts.spec.ts
-```
-
-Run tests with UI mode:
-
-```bash
-npx playwright test --ui
-```
-
-Generate test report:
-
-```bash
-npx playwright show-report
-```
-
-## Troubleshooting
-
-Common issues and solutions:
-
-1. **Tests fail on first run**
-
-   - Ensure 🦎 GAD application is running
-   - Check if correct Node.js version is installed
-
-2. **Browser launch fails**
-   ```bash
-   npx playwright install
-   ```
-
 ## Resources
 
 - [Playwright Documentation](https://playwright.dev/docs/intro)
 - [Playwright GitHub Repository](https://github.com/microsoft/playwright)
+- [Artillery with Playwright engine](https://www.artillery.io/docs/reference/engines/playwright)
 - Additional resources - [BugHuntFest Vol.2](https://jaktestowac.pl/bughuntfest2/)
 
 ## Contact
